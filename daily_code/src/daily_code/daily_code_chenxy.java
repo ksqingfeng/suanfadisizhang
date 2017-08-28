@@ -1,6 +1,8 @@
 package daily_code;
 import java.util.*;
 
+import javax.print.attribute.standard.RequestingUserName;
+
 //1.2.4 下列代码会打印出什么？
 //public class daily_code_chenxy {
 //
@@ -70,11 +72,27 @@ public class daily_code_chenxy {
         String b = s.substring(n/2, n);  
         return mystery(b) + mystery(a);  
     }  
+	
+	public class FixedcapacityStack<Item>
+	{
+		private Item[] a;
+		private int n;
+		public FixedcapacityStack(int cap)
+		{
+			a=(Item[]) new Object[cap];
+		}
+		public boolean isEmpty(){
+			return n==0;	
+		}
+		
+		
+	}
 
 	public static void main(String[] args) {
 		System.out.println(mystery("abcd"));
 		System.out.println(mystery("qwer"));
-	}
+	
+				}
 }	//返回值是把字符串倒序输出。
 
 
